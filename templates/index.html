@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public.css') }}">
+</head>
+<body>
+    <div class="wrap clearFloat testBlock">
+        <div class="column" id="codeBlockBar">
+            <ul>
+                <li class="codeBlockGroup">
+                    <div class="covering" id="events"></div>
+                    <button class="codeGroupBtn" id="eventsBtn">
+                        <div id="eventsImg" class="codeBlockImg">
+                            <img src="../static/resource/shijian.png" alt="">
+                        </div>
+                        <p>事件</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="controlBtn">
+                        <div id="controlImg" class="codeBlockImg">
+                            <img src="../static/resource/iconfontyouxihudong.png" alt="">
+                        </div>
+                        <p>控制</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="operatorsBtn">
+                        <div id="operatorsImg" class="codeBlockImg">
+                            <img src="../static/resource/jisuan.png" alt="">
+                        </div>
+                        <p>运算</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="stringBtn">
+                        <div id="stringImg" class="codeBlockImg">
+                            <img src="../static/resource/code-string.png" alt="">
+                        </div>
+                        <p>字符串</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="variablesBtn">
+                        <div id="variablesImg" class="codeBlockImg">
+                            <img src="../static/resource/bianliangfuzhi.png" alt="">
+                        </div>
+                        <p>变量</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="listsBtn">
+                        <div id="listsImg" class="codeBlockImg">
+                            <img src="../static/resource/liebiao.png" alt="">
+                        </div>
+                        <p>列表</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="dicBtn">
+                        <div id="dicImg" class="codeBlockImg">
+                            <img src="../static/resource/zidianguanli.png" alt="">
+                        </div>
+                        <p>字典</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="functionBtn">
+                        <div id="functionImg" class="codeBlockImg">
+                            <img src="../static/resource/guize.png" alt="">
+                        </div>
+                        <p>函数</p>
+                    </button>
+                </li>
+                <li class="codeBlockGroup">
+                    <button class="codeGroupBtn" id="turtleBtn">
+                        <div id="turtleImg" class="codeBlockImg">
+                            <img src="../static/resource/chongwugui.png" alt="">
+                        </div>
+                        <p>海龟库</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="column" id="codeLib">
+
+            <div class="panel column" id="eventsCodeLib">
+                <div class="start dragElement" draggable="true" id="start">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true" id="print">
+                    <p>print</p>
+                    <input type="text"  value="hello">
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true" id="comment">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true" id="getInput">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true" id="ask">
+                    <p>ask</p>
+                    <input type="text" value='Your name?'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true" id="enter">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="controlCodeLib">
+                <div class="repeat dragElement" draggable="true" id="repeat">
+                    <p>repeat</p>
+                    <input type="text" value='"20"'>
+                    <p>times</p>
+                </div>
+                <div class="count dragElement" draggable="true" id="count">
+                    <p>count with</p>
+<!--                    <select name="" id="variables">-->
+<!--                        <option>i</option>-->
+<!--                    </select>-->
+                    <input type="text" value='i'>
+                    <p>in</p>
+                    <input type="text" value='Hello'>
+                    <button>+</button>
+                </div>
+                <div class="while dragElement" draggable="true" id="while">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="if dragElement" draggable="true" id="if">
+                    <p>get input</p>
+                </div>
+                <div class="if-else dragElement" draggable="true" id="if-else">
+                    <p>ask</p>
+                    <input type="text" value='Your name?'>
+                    <p>and get input</p>
+                </div>
+                <div class="quitLoop dragElement" draggable="true" id="quitLoop">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="try dragElement" draggable="true" id="try">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="wait dragElement" draggable="true" id="wait">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="current dragElement" draggable="true" id="current">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="operatorsCodeLib">
+                <div class="num dragElement" draggable="true" id="num">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="arithmetic dragElement" draggable="true" id="arithmetic">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="power dragElement" draggable="true" id="power">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="remainder dragElement" draggable="true" id="remainder">
+                    <p>get input</p>
+                </div>
+                <div class="abs dragElement" draggable="true" id="abs">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="compare dragElement" draggable="true" id="compare">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="andOr dragElement" draggable="true" id="andOr">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="trueFalse dragElement" draggable="true" id="trueFalse">
+                    <p>get input</p>
+                </div>
+                <div class="not dragElement" draggable="true" id="not">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="is dragElement" draggable="true" id="is">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="round dragElement" draggable="true" id="round">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="log dragElement" draggable="true" id="log">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="sin dragElement" draggable="true" id="sin">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="asin dragElement" draggable="true" id="asin">
+                    <p>get input</p>
+                </div>
+                <div class="arithmetic_square_root dragElement" draggable="true" id="arithmetic_square_root">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="factorial dragElement" draggable="true" id="factorial">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="e dragElement" draggable="true" id="e">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+                <div class="pai dragElement" draggable="true" id="pai">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="stringCodeLib">
+                <div class="start dragElement" draggable="true">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="variablesCodeLib">
+                <div class="set dragElement" draggable="true" id="set">
+                    <p>set</p>
+                    <input type="text" value='i'>
+                    <p>to</p>
+                    <input type="text" value="0">
+                </div>
+
+                <div class="increase dragElement" draggable="true" id="increase">
+                    <p>increase</p>
+                    <input type="text" value='i'>
+                    <p>by</p>
+                    <input type="text" value="0">
+                </div>
+
+                <div class="variable dragElement" draggable="true" id="variable">
+                    <input type="text" value="i">
+                </div>
+            </div>
+
+            <div class="panel column" id="listsCodeLib">
+                <div class="start dragElement" draggable="true">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="dicCodeLib">
+                <div class="start dragElement" draggable="true">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="functionCodeLib">
+                <div class="start dragElement" draggable="true">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+            <div class="panel column" id="turtleCodeLib">
+                <div class="start dragElement" draggable="true">
+                    <p>Get start with Python</p>
+                </div>
+                <div class="print dragElement" draggable="true">
+                    <p>print</p>
+                    <input type="text" value='"Hello"'>
+                    <button>+</button>
+                </div>
+                <div class="comment dragElement" draggable="true">
+                    <p>comment out</p>
+                    <input type="text" value="Comment...">
+                </div>
+                <div class="getInput dragElement" draggable="true">
+                    <p>get input</p>
+                </div>
+                <div class="ask dragElement" draggable="true">
+                    <p>ask</p>
+                    <input type="text" value='"Your name?"'>
+                    <p>and get input</p>
+                </div>
+                <div class="enter dragElement" draggable="true">
+                    <input type="text" value="# Enter your code and execute">
+                </div>
+            </div>
+
+        </div>
+        <div class="column" id="canvas" >
+<!--            <h1>C2</h1>-->
+        </div>
+        <div class="column" id="output">
+            <div id="operateArea">
+                <form class="form-group">
+                <div class="btnPacket clearFloat">
+                    <button class="codeOperate" id="run" type="submit">
+                        <div>
+                            <img src="../static/resource/bofangqi-bofang.png" alt="">
+                            <p>Run</p>
+                        </div>
+                    </button>
+
+                    <button class="codeOperate" id="clear" type="button" >
+                        <div>
+                            <img src="../static/resource/qingli.png" alt="">
+                            <p>Clear</p>
+                        </div>
+                    </button>
+                </div>
+                </form>
+            </div>
+            <div id="outputArea">
+                <textarea readonly="readonly" id="outputText" disabled="disabled">
+                </textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{{ url_for('static',filename='js/index.js') }}"></script>
+</html>

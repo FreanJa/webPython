@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+</head>
+<body>
+<!--    <textarea cols="50" rows="50" style="margin:50px"></textarea>-->
+<div id="myApp">
+  <h1>Input code:</h1>
+  <textarea v-model = "code" rows="50" cols="50" style="margin:50px 0px">{{code}}</textarea>
+  <button @click="submit">提交</button>
+  <textarea v-model = "result">{{result}}</textarea>
+</div>
+<script>
+  var myApp = new Vue({
+    el: "#myApp",
+    data: {
+      code: "print('hello world!')",
+      result: ""
+    },
+    mounted: function (){
+      this.fetchData();
+    },
+    methods: {
+      fetchData(){
+        this.$http.get("/server").then(rsp =>{
+          this.result = rsp.body
+        }, error => {console.log('Error')})},
+      submit() {
+        this.$http.post("/server",{code: this.code}).then(rsp =>{
+          this.result = rsp.body
+        }, error => {console.log('Error')});
+      }
+    }
+  })
+</script>
+</body>
+</html>
+
+
+function ajaxForm(){
+        var form= new FormData(document.getElementById("test_form"));
+        $.ajax({
+            url:"{{ url_for('api_upload') }}",
+            type:"post",
+            data:form,
+            dataType: 'json',
+            processData:false,
+            contentType:false,
+            success:function(data){
+                    $(img_url_new).attr("src",data.img_url_new);
+                    $(imgPic).attr("src",data.img_url_new);
+            },
+            error:function(e){
+                    alert("error");
+            }
+        })
+}
+

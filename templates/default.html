@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if page_title %}
+            {{ page_title }}
+        {% endif %}
+    </title>
+</head>
+<body>
+    <textarea cols="50" rows="50" style="margin:50px"></textarea>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

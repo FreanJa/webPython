@@ -1,0 +1,376 @@
+.wrap{
+    height: 100vh;
+    /*width: 1000px;*/
+    background: #f8f6f2;
+}
+
+.column{
+    height: 100%;
+    float: left;
+}
+
+#codeBlockBar{
+    background: #f7f2e7;
+    width: 15%;
+    border-right: #ebe2d6 1px solid;
+}
+
+/*#codeLib{*/
+/*    background: #f7f2e7;*/
+/*    !*width: 20%;*!*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    left: 15%;*/
+/*    box-shadow: 2px 2px 5px #0005;*/
+/*}*/
+
+.panel{
+    background: #f7f2e7;
+    /*width: 20%;*/
+    display: none;
+    position: absolute;
+    left: 15%;
+    box-shadow: 2px 2px 5px #0005;
+    overflow-y: scroll;
+}
+
+#canvas{
+    background: #f8f6f2;
+    /*background: red;*/
+    /*border: 1px solid red;*/
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    /*position: absolute;*/
+    /*right: 15%;*/
+    /*width: 54%;*/
+}
+
+#output{
+    position: absolute;
+    right: 0;
+    background: #41444e;
+    width: 30%;
+    overflow-y: scroll;
+}
+
+
+.codeBlockGroup{
+    margin-bottom: 5px;
+    padding: 30px 50px;
+}
+
+.codeGroupBtn{
+    width: 100%;
+    padding: 20px;
+    border-radius: 100px;
+    transition: background-color 0.4s;
+    line-height: 75px;
+    background: #0000;
+    border: #0000;
+}
+
+.codeGroupBtn:hover{
+    background-color: #fcfcf8;
+    display: block;
+}
+
+.codeBlockImg{
+    float: left;
+    width: 75px;
+    height: 75px;
+    /*background-color: #6388f1;*/
+    border-radius: 75px;
+    text-align: center;
+}
+
+.codeBlockImg img{
+    margin-top: 20px;
+}
+
+
+.codeGroupBtn p{
+    float: left;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #7e683b;
+}
+
+#eventsImg{
+    background-color: #6388f1;
+}
+
+#eventsBtn:focus{
+    background-color: #6388f1;
+    border: #0000;
+}
+
+#eventsCodeLib div{
+    background-color: #6388f1;
+}
+
+
+#eventsBtn:focus p{
+    color: #fff;
+}
+
+
+#controlImg{
+    background-color: #68cdff;
+}
+
+#controlBtn:focus{
+    background-color: #68cdff;
+}
+
+#controlCodeLib div{
+    background-color: #68cdff;
+}
+
+
+#controlBtn:focus p{
+    color: #fff;
+}
+
+#operatorsImg{
+    background-color: #fbbda2;
+}
+
+#operatorsBtn:focus{
+    background-color: #fbbda2;
+}
+
+#operatorsCodeLib div{
+    background-color: #fbbda2;
+}
+
+
+#operatorsBtn:focus p{
+    color: #fff;
+}
+
+#stringImg{
+    background-color: #77e354;
+}
+
+#stringBtn:focus{
+    background-color: #77e354;
+}
+
+#stringCodeLib div{
+    background-color: #77e354;
+}
+
+
+#stringBtn:focus p{
+    color: #fff;
+}
+
+#variablesImg{
+    background-color: #f5b768;
+}
+
+#variablesBtn:focus{
+    background-color: #f5b768;
+}
+
+#variablesCodeLib div{
+    background-color: #f5b768;
+}
+
+
+#variablesBtn:focus p{
+    color: #fff;
+}
+
+#listsImg{
+    background-color: #ffd263;
+}
+
+#listsBtn:focus{
+    background-color: #ffd263;
+}
+
+#listsCodeLib div{
+    background-color: #ffd263;
+}
+
+
+#listsBtn:focus p{
+    color: #fff;
+}
+
+#dicImg{
+    background-color: #7d68f1;
+}
+
+#dicBtn:focus {
+    background-color: #7d68f1;
+}
+
+#dicCodeLib div{
+    background-color: #7d68f1;
+}
+
+
+#dicBtn:focus p{
+    color: #fff;
+}
+
+#functionImg{
+    background-color: #f08f63;
+}
+
+#functionBtn:focus{
+    background-color: #f08f63;
+}
+
+#functionCodeLib div{
+    background-color: #f08f63;
+}
+
+
+#functionBtn:focus p{
+    color: #fff;
+}
+
+#turtleImg{
+    background-color: #51e3c3;
+}
+
+#turtleBtn:focus{
+    background-color: #51e3c3;
+}
+
+#turtleCodeLib div{
+    background-color: #51e3c3;
+}
+
+
+#turtleBtn:focus p{
+    color: #fff;
+}
+
+
+
+.dragElement{
+    margin: 40px;
+    line-height: 40px;
+    padding: 40px;
+    border-radius: 100px;
+    /*position: absolute;*/
+    /*display: inline;*/
+    /*zoom: 1;*/
+
+}
+
+.dragElement p{
+    margin-left: 50px;
+    font-size: 40px;
+    color: #fff;
+    display: inline;
+}
+
+.dragElement button{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+}
+
+.dragElement input{
+    height: 36px;
+    font-size: 30px;
+}
+
+/*.covering{*/
+/*    z-index: 0;*/
+/*    background-color: #ffff00;*/
+/*    height: 100px;*/
+/*    width: 100px;*/
+/*    float: left;*/
+/*}*/
+
+/*.codeBlockGroup{*/
+/*    position: absolute;*/
+/*}*/
+
+#operateArea{
+    /*background: red;*/
+    text-align: center;
+    padding: 50px 50px 0 50px;
+
+}
+
+.btnPacket{
+    /*background: green;*/
+    display: inline-block;
+}
+
+.codeOperate{
+    background: #33475c;
+    /*padding: 15px 60px 0 0;*/
+    /*padding: 60px;*/
+    float: left;
+    /*width: 300px;*/
+    /*height: 75px;*/
+    /*background-color: #6388f1;*/
+    /*border-radius: 75px;*/
+    text-align: center;
+    /*line-height: 75px;*/
+    border: #796855 1px solid;
+    display: flex;
+    width: 330px;
+    margin: 20px 60px;
+    /*margin-bottom: 0px;*/
+    /*text-align: center;*/
+}
+
+.codeOperate:hover{
+    background: #fff;
+}
+
+.codeOperate:hover p{
+    color: #543700;
+}
+
+.codeOperate div{
+    margin: 20px auto;
+    line-height: 50px;
+    /*display: inline-block;*/
+    /*padding: 0 20px;*/
+}
+
+.codeOperate img{
+    width: 50px;
+    float: left;
+}
+
+.codeOperate p{
+    color: #fff;
+    float: left;
+    font-size: 36px;
+    margin-left: 50px;
+    /*color: #7e683b;*/
+}
+
+#outputArea{
+    text-align: center;
+}
+
+#outputText{
+    padding: 0 5%;
+    width: 85%;
+    background: #00000000;
+    border: none;
+    color: white;
+    font-size: 50px;
+    resize: none;
+}
+
+
+
+
+
+
+
